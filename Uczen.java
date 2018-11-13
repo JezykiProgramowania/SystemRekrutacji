@@ -6,12 +6,20 @@ import java.util.Map;
 public class Uczen {
 
 
-   private String imie = "";
+    private String imie = "";
+    private  String wynikRekrutacji = "";
 
-   private List<String> preferencje = new ArrayList();
+    private List<String> preferencje = new ArrayList();
     private List<String> szkola = new ArrayList<>();
+
     private Map<Integer, String> prefSzkola = new HashMap<>();
+    private  Map<String, Integer> szkolaPref = new HashMap<>();
+
+
     private int punkty = 0;
+
+    private boolean isSatisfied = false;
+
 
 
 
@@ -40,6 +48,18 @@ public class Uczen {
 
     }
 
+    public void SetSzkolaPref(String szkola, int pref) {
+        this.szkolaPref.put(szkola, pref);
+
+    }
+
+    public void SetWynikRekrutacji(String wynikRekrutacji) {
+        this.wynikRekrutacji = wynikRekrutacji;
+    }
+
+    public void setSatisfied(boolean satisfied) {
+        isSatisfied = satisfied;
+    }
     ////////////////////////
     //GETTERS
     ///////////////////
@@ -64,5 +84,19 @@ public class Uczen {
     public Map<Integer, String> GetPrefSzkola() {
         return prefSzkola;
 
+    }
+
+
+    public Map<String, Integer> GetSzkolaPref() {
+        return szkolaPref;
+
+    }
+
+    public String GetWynikRekrutacji() {
+        return wynikRekrutacji;
+    }
+
+    public boolean isSatisfied() {
+        return isSatisfied;
     }
 }
