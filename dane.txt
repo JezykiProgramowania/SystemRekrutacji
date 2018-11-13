@@ -1,0 +1,12 @@
+;
+imie
+546
+1
+szkola1
+2
+szkola2
+3
+szkola3
+;
+imie2
+567
